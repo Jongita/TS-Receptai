@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptai</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <script type="module" src="./dist/app.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <img src="" alt="Logo image">
+        <nav class="mainHeaderList">
+            <ul>
+                <li><a href="">RECEPTAI</a></li>
+                <li><a href="">KONTAKTAI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <section id="loginSection">
+        <div class="container">
+            <div class="row" style="min-height: 100vh;">
+                <div class="col-md-4 offset-md-4 d-flex align-items-center">
+                    <div class="alert alert-secondary p-5" style="width: 420px;">
+                        <h5 class="mb-4">Prisijunkite arba registruokitės</h5>
+                        <input type="text" class="form-control mb-3" placeholder="El. pašto adresas" id="loginEmail">
+                        <input type="password" class="form-control mb-3" placeholder="Slaptažodis" id="loginPassword">
+                        <div class="alert alert-danger" id="loginError"></div>
+                        <button class="btn btn-success" id="login">Prisijungti</button>
+                        <button class="btn btn-success float-end" id="register">Registruotis</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- </section> -->
+
+    <section id="dataSection">
+        <div class="title">
+            <h2>Receptai</h2>
+            <img src="./img/titlefoto.png" alt="foto">
+
+        </div>
+        <div class="mainContainer">
+            <div class="container">
+                <h2>Įvesti receptą:</h2>
+                <div class="mainRecipeForm" id="recipeForm">
+                    <input type="text" id="recipeName" placeholder="Pavadinimas">
+                    <input type="number" id="cookTime" placeholder="Gaminimo trukmė, min.">
+                    <textarea id="description" placeholder="Aprašymas"></textarea>
+                    <button class="btn" id="addRegistration">Pridėti receptą</button>
+                </div>
+
+            </div>
+            <div id="dataTable">
+                <h2>Turimi receptai:</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Pavadinimas</th>
+                            <th>Gaminimo trukmė, min.</th>
+                            <!-- <th>Aprasymas</th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody">
+                        <tr>
+                            <th>Lazanija</th>
+                            <th>45 min.</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div id="editForm" style="display: none;">
+                <div class="mb-3">
+                    <label for="" class="form-label">Pavadinimas:</label>
+                    <input type="text" name="" id="recipeNameEdit" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Gaminimo trukmė, min.:</label>
+                    <input type="number" name="" id="cookTimeEdit" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Aprašymas:</label>
+                    <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
+                </div>
+                <button class="btn btn-success" id="updateRegistration">Atnaujinti įrašą</button>
+            </div>
+            <div>
+                <button class="btn" id="loadData">Atnaujinti</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-list">
+            <a class="icon fa fa-twitter" href="https://www.example.com" target="_blank"></a>
+            <a class="icon fa fa-facebook" href="https://en.wikipedia.org/wiki/Email_address#Local-part" target="_blank"></a>
+            <a class="icon fa fa-instagram" href="https://en.wikipedia.org/wiki/Email_address#Domain" target="_blank"></a>
+        </div>
+        <p class="copyright">Copyright &copy; 2024. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
