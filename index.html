@@ -19,17 +19,21 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <script type="module" src="./dist/app.js"></script>
 </head>
 
 
 <body>
-    <header>
+    <header class="mainHeader">
         <img src="./img/logo.png" alt="Logo image">
         <nav class="mainHeaderList">
             <ul>
-                <li><a href="">RECEPTAI</a></li>
+                <li><a href="./index.html">PAGRINDINIS</a></li>
+                <li><a href="./receptai.html">RECEPTAI</a></li>
                 <li><a href="">KONTAKTAI</a></li>
             </ul>
         </nav>
@@ -70,9 +74,12 @@
                 </div>
 
             </div>
-            <div id="dataTable">
+            <div class="dataTableContainer" id="dataTable">
                 <h2>Turimi receptai:</h2>
-                <table class="table table-hover">
+                <div>
+                    <button class="btnLoad" id="loadData">Atnaujinti sąrašą</button>
+                </div>
+                <table class="table-hover">
                     <thead>
                         <tr>
                             <th>Pavadinimas</th>
@@ -90,7 +97,7 @@
 
             </div>
 
-            <div id="editForm" style="display: none;">
+            <div class="editDataTableContainer" id="editForm" style="display: none; background-color: yellow;">
                 <div class="mb-3">
                     <label for="" class="form-label">Pavadinimas:</label>
                     <input type="text" name="" id="recipeNameEdit" class="form-control">
@@ -105,9 +112,9 @@
                 </div>
                 <button class="btn btn-success" id="updateRegistration">Atnaujinti įrašą</button>
             </div>
-            <div>
-                <button class="btn" id="loadData">Atnaujinti</button>
-            </div>
+            <!-- <div>
+                <button class="btn" id="loadData">Atnaujinti sąrašą</button>
+            </div> -->
         </div>
     </section>
 

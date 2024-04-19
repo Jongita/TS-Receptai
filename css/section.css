@@ -1,0 +1,112 @@
+.mainContainer {
+    
+    width: 1200px;
+    display: flex;
+
+    min-height: calc(100vh - 500px);
+    min-width: calc(100vw - 1200px);
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    width: 50%;
+}
+.container h2 {
+    margin: 20px 0;
+}
+
+.dataTableContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dataTableContainer h2 {
+    margin: 20px 0;
+}
+
+.table-hover {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+th {
+    border-bottom: 1px solid #ddd;
+    width: 300px;
+}
+
+.mainRecipeForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mainRecipeForm input {
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #1e4e72c5;
+    width: 350px;
+    color: #1e4e72c5;
+    padding: 10px 0;
+}
+
+.mainRecipeForm textarea {
+    border: 2px solid #1e4e72c5;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 350px;
+    color: #1e4e72c5;
+    padding: 10px 0;
+}
+
+.mainRecipeForm button {
+    padding: 15px 50px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    background-color: #1e4e72c5;
+    cursor: pointer;
+}
+
+.btnLoad {
+    padding: 15px 50px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    background-color: #1e4e72c5;
+    cursor: pointer;
+}
+
+.mb-3 {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mb-3 input {
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #1e4e72c5;
+    width: 350px;
+    color: #1e4e72c5;
+    padding: 10px 0;
+}
+
+.mb-3 textarea {
+    border: 2px solid #1e4e72c5;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 350px;
+    color: #1e4e72c5;
+    padding: 10px 0;
+}
