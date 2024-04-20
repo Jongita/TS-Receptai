@@ -1,4 +1,8 @@
-import { Registration } from "./registration";
+import { loginExec, registerExec } from "./auth.js";
+import { fetchRegistrations } from "./fetchData.js";
+import { loadData } from "./loadData.js";
+import { Registration } from "./registration.js";
+import { showData } from "./showData.js";
 
 const recipeNameDOM =<HTMLInputElement>document.getElementById("recipeName");
 const cookTimeDOM=<HTMLInputElement>document.getElementById("cookTime");
@@ -12,7 +16,7 @@ const dataTableBody=<HTMLElement>document.getElementById("dataTableBody");
 const dataTable=<HTMLElement>document.getElementById("dataTable");
 const editForm=<HTMLElement>document.getElementById("editForm");
 
-let registrationData:Registration[];
+export const registrationData:Registration[] = [];
 
 addRegistrationButton.onclick=()=>{
 
@@ -39,87 +43,18 @@ addRegistrationButton.onclick=()=>{
    
 };
 
-const showData=()=>{
-    dataTableBody.innerHTML="";
-    registrationData.forEach((reg)=>{
-        const tr=document.createElement("tr");
+export const userInfo={
+    email:"",
+    idToken:"",
+    loggedin:false,
+};
 
-        const tdRecipeName=document.createElement("td");
-        tdRecipeName.innerHTML=reg.recipeName;
-        
-        const tdCookTime=document.createElement("td");
-        tdCookTime.innerHTML=reg.cookTime.toString();
-    
-        const tdDescription=document.createElement("td");
-        tdDescription.innerHTML=reg.description;
-
-        tr.appendChild(tdRecipeName);
-        tr.appendChild(tdCookTime);
-        // tr.appendChild(tdDescription);
-
-        dataTableBody.appendChild(tr);
-
-        tr.onclick=()=>{
-            dataTable.style.display="none";
-            editForm.style.display="block";
-            (<HTMLInputElement>document.getElementById("recipeNameEdit")).value=reg.recipeName;
-            (<HTMLInputElement>document.getElementById("cookTimeEdit")).value=reg.cookTime.toString();
-            (<HTMLTextAreaElement>document.getElementById("descriptionEdit")).value=reg.description;
-
-
-            (<HTMLButtonElement>document.getElementById("updateRegistration")).onclick=()=>{
-                const upReg:Registration={
-                    recipeName:(<HTMLInputElement>document.getElementById("recipeNameEdit")).value,
-                    cookTime:(<HTMLInputElement>document.getElementById("cookTimeEdit")).valueAsNumber,
-                    description:(<HTMLTextAreaElement>document.getElementById("descriptionEdit")).value,
-                    
-                }
-                fetch(`https://receptai-4a520-default-rtdb.europe-west1.firebasedatabase.app/Receptai/${reg.id}.json`,{
-                    method:"PUT",
-                    headers:{
-                        'Accept':'application/json',
-                        'Content-Type':'application/json'
-                    },
-                    body:JSON.stringify(upReg)
-                })
-                .then((response)=>{
-                    return response.json();
-                })
-                .then((data)=>{
-                    console.log("Įrašas atnaujintas");
-                    console.log(data);
-                    dataTable.style.display="block";
-                    editForm.style.display="none";
-                    loadData();
-                })
-            }      
-          }
-    })
-
-
-}
-
-const loadData=()=>{
-    fetch("https://receptai-4a520-default-rtdb.europe-west1.firebasedatabase.app/Receptai.json", {
-        method: "GET",
-        headers:{
-            'Accept':'application/json',
-            'Content-Type':'application/json'
-        }
-    })
-    .then((response)=>{
-        return response.json();
-    })
-    .then((data: {[key:string]:Registration})=>{
-    
-        registrationData=[];
-        Object.keys(data).forEach((k)=>{
-            registrationData.push({id:k,...data[k]});
-        })
-        showData();
-        console.log(registrationData);
-    });
-}
+(<HTMLElement>document.getElementById("loginSection")).style.display="block";
+(<HTMLElement>document.getElementById("dataSection")).style.display="none";
+(<HTMLElement>document.getElementById("loginError")).style.display="none";
 
 
 loadDataButton.onclick=loadData;
+
+(<HTMLButtonElement>document.getElementById("login")).onclick=loginExec;
+(<HTMLButtonElement>document.getElementById("register")).onclick=registerExec;
