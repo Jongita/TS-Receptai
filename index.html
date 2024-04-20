@@ -21,8 +21,8 @@
 
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/section.css">
     <link rel="stylesheet" href="./css/footer.css">
 
     <script type="module" src="./dist/app.js"></script>
@@ -42,21 +42,24 @@
     </header>
 
     <section id="loginSection">
-        <div class="container">
-            <div class="row" style="min-height: 100vh;">
-                <div class="col-md-4 offset-md-4 d-flex align-items-center">
-                    <div class="alert alert-secondary p-5" style="width: 420px;">
-                        <h5 class="mb-4">Prisijunkite arba registruokitės</h5>
-                        <input type="text" class="form-control mb-3" placeholder="El. pašto adresas" id="loginEmail">
-                        <input type="password" class="form-control mb-3" placeholder="Slaptažodis" id="loginPassword">
-                        <div class="alert alert-danger" id="loginError"></div>
-                        <button class="btn btn-success" id="login">Prisijungti</button>
-                        <button class="btn btn-success float-end" id="register">Registruotis</button>
-                    </div>
+        <div class="title">
+            <h2>Receptai</h2>
+            <img src="./img/titlefoto.png" alt="foto">
+        </div>
+        <div class="containerLogin">
+            <div class="mainLogin">
+                <h2>Prisijunkite arba registruokitės</h2>
+                <input type="text" class="form-control" placeholder="El. pašto adresas" id="loginEmail">
+                <input type="password" class="form-control" placeholder="Slaptažodis" id="loginPassword">
+                <div class="alert" id="loginError"></div>
+                <div class="loginButtons">
+                    <button class="btnLogin" id="login">Prisijungti</button>
+                    <button class="btnRegister" id="register">Registruotis</button>
                 </div>
-            </div>
-        </div> -->
+                <h4>*Norint peržiūrėti receptus, eikite į RECEPTAI skiltį</h4>
 
+            </div>
+        </div>
     </section>
 
     <section id="dataSection">
@@ -71,6 +74,7 @@
                 <div class="mainRecipeForm" id="recipeForm">
                     <input type="text" id="recipeName" placeholder="Pavadinimas">
                     <input type="number" id="cookTime" placeholder="Gaminimo trukmė, min.">
+                    <textarea id="ingredients" placeholder="Ingredientai"></textarea>
                     <textarea id="description" placeholder="Aprašymas"></textarea>
                     <button class="btn" id="addRegistration">Pridėti receptą</button>
                 </div>
@@ -108,12 +112,19 @@
                     <label for="" class="form-label">Gaminimo trukmė, min.:</label>
                     <input type="number" name="" id="cookTimeEdit" class="form-control">
                 </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Aprašymas:</label>
-                    <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
+                <div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Ingredientai:</label>
+                        <textarea type="text" id="ingredientsEdit" placeholder="Ingredientai" class="form-control"></textarea>></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Aprašymas:</label>
+                        <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
+                    </div>
                 </div>
-                <div class="mb-3">
+                <div class="buttonsEditTable">
                     <button class="btnUpdate" id="updateRegistration">Atnaujinti įrašą</button>
+                    <button class="btnDelete" id="deleteRegistration">Ištrinti įrašą</button>
                 </div>
 
             </div>

@@ -9,6 +9,8 @@ export const showData = (registrationData) => {
         tdRecipeName.innerHTML = reg.recipeName;
         const tdCookTime = document.createElement("td");
         tdCookTime.innerHTML = reg.cookTime.toString();
+        const tdIngredients = document.createElement("td");
+        tdIngredients.innerHTML = reg.ingredients;
         const tdDescription = document.createElement("td");
         tdDescription.innerHTML = reg.description;
         tr.appendChild(tdRecipeName);
@@ -19,11 +21,13 @@ export const showData = (registrationData) => {
             document.getElementById("editForm").style.display = "block";
             document.getElementById("recipeNameEdit").value = reg.recipeName;
             document.getElementById("cookTimeEdit").value = reg.cookTime.toString();
+            document.getElementById("ingredientsEdit").value = reg.ingredients;
             document.getElementById("descriptionEdit").value = reg.description;
             document.getElementById("updateRegistration").onclick = () => {
                 const upReg = {
                     recipeName: document.getElementById("recipeNameEdit").value,
                     cookTime: document.getElementById("cookTimeEdit").valueAsNumber,
+                    ingredients: document.getElementById("ingredientsEdit").value,
                     description: document.getElementById("descriptionEdit").value,
                 };
                 fetchRegistrations(`Receptai/${reg.id}`, "PUT", upReg)

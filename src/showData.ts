@@ -14,11 +14,15 @@ export const showData=(registrationData:Registration[])=>{
         const tdCookTime=document.createElement("td");
         tdCookTime.innerHTML=reg.cookTime.toString();
     
+        const tdIngredients=document.createElement("td");
+        tdIngredients.innerHTML=reg.ingredients;
+
         const tdDescription=document.createElement("td");
         tdDescription.innerHTML=reg.description;
 
         tr.appendChild(tdRecipeName);
         tr.appendChild(tdCookTime);
+      
        
 
         dataTableBody.appendChild(tr);
@@ -29,6 +33,7 @@ export const showData=(registrationData:Registration[])=>{
         
             (<HTMLInputElement>document.getElementById("recipeNameEdit")).value=reg.recipeName;
             (<HTMLInputElement>document.getElementById("cookTimeEdit")).value=reg.cookTime.toString();
+            (<HTMLTextAreaElement>document.getElementById("ingredientsEdit")).value=reg.ingredients;
             (<HTMLTextAreaElement>document.getElementById("descriptionEdit")).value=reg.description;
 
 
@@ -36,6 +41,7 @@ export const showData=(registrationData:Registration[])=>{
                 const upReg:Registration={
                     recipeName:(<HTMLInputElement>document.getElementById("recipeNameEdit")).value,
                     cookTime:(<HTMLInputElement>document.getElementById("cookTimeEdit")).valueAsNumber,
+                    ingredients:(<HTMLTextAreaElement>document.getElementById("ingredientsEdit")).value,
                     description:(<HTMLTextAreaElement>document.getElementById("descriptionEdit")).value,
                     
                 }

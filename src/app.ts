@@ -6,6 +6,7 @@ import { showData } from "./showData.js";
 
 const recipeNameDOM =<HTMLInputElement>document.getElementById("recipeName");
 const cookTimeDOM=<HTMLInputElement>document.getElementById("cookTime");
+const ingredientsDOM=<HTMLTextAreaElement>document.getElementById("ingredients");
 const descriptionDOM=<HTMLTextAreaElement>document.getElementById("description");
 const addRegistrationButton=<HTMLButtonElement>document.getElementById("addRegistration");
 
@@ -23,16 +24,10 @@ addRegistrationButton.onclick=()=>{
     const reg:Registration={
         recipeName: recipeNameDOM.value,
         cookTime: cookTimeDOM.valueAsNumber,
+        ingredients: ingredientsDOM.value,
         description: descriptionDOM.value,
     }
-    fetch("https://receptai-4a520-default-rtdb.europe-west1.firebasedatabase.app/Receptai.json",{
-        method:"POST",
-        headers:{
-            'Accept':'application/json',
-            'Content-Type':'application/json'
-        },
-        body:JSON.stringify(reg)
-    })
+    fetchRegistrations('Receptai','POST', reg)
     .then((response)=>{
         return response.json();
     })
@@ -40,7 +35,11 @@ addRegistrationButton.onclick=()=>{
         console.log("Įrašas pridėtas");
         console.log(data);
     })
-   
+    recipeNameDOM.value = '';
+    cookTimeDOM.value = '';
+    ingredientsDOM.value = '';
+    descriptionDOM.value = '';
+
 };
 
 export const userInfo={

@@ -28,5 +28,8 @@ li a {
 
 li a:hover {
    color: red;
+}
 
+ul li:nth-child(2) a {
+    color: red;
 }
