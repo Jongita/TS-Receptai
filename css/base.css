@@ -13,7 +13,7 @@ body {
 
 #dataSection {
     display: flex;
-    justify-content:first baseline;
+    
     align-items: center;
     flex-direction: column;
     background-color:#1e4e72c5;
@@ -49,10 +49,15 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
-.dataTableContainer h2 {
-    margin: 20px 0;
+.dataTableHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .table-hover {
@@ -108,4 +113,14 @@ th {
 .mb-3 label {
     margin: 20px 0;
     font-size: 25px;
+}
+
+.btnReturn {
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    background-color: #1e4e72c5;
+    cursor: pointer;
 }

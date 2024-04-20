@@ -57,7 +57,6 @@
                     <button class="btnRegister" id="register">Registruotis</button>
                 </div>
                 <h4>*Norint peržiūrėti receptus, eikite į RECEPTAI skiltį</h4>
-
             </div>
         </div>
     </section>
@@ -66,7 +65,6 @@
         <div class="title">
             <h2>Receptai</h2>
             <img src="./img/titlefoto.png" alt="foto">
-
         </div>
         <div class="mainContainer">
             <div class="container">
@@ -81,8 +79,8 @@
 
             </div>
             <div class="dataTableContainer" id="dataTable">
-                <h2>Turimi receptai:</h2>
-                <div>
+                <div class="dataTableHeader">
+                    <h2>Turimi receptai:</h2>
                     <button class="btnLoad" id="loadData">Atnaujinti sąrašą</button>
                 </div>
                 <table class="table-hover">
@@ -90,7 +88,6 @@
                         <tr>
                             <th>Pavadinimas</th>
                             <th>Gaminimo trukmė, min.</th>
-                            <!-- <th>Aprasymas</th> -->
                         </tr>
                     </thead>
                     <tbody id="dataTableBody">
@@ -100,7 +97,6 @@
                         </tr>
                     </tbody>
                 </table>
-
             </div>
 
             <div class="editDataTableContainer" id="editForm" style="display: none;">
@@ -126,12 +122,7 @@
                     <button class="btnUpdate" id="updateRegistration">Atnaujinti įrašą</button>
                     <button class="btnDelete" id="deleteRegistration">Ištrinti įrašą</button>
                 </div>
-
             </div>
-
-            <!-- <div>
-                <button class="btn" id="loadData">Atnaujinti sąrašą</button>
-            </div> -->
         </div>
     </section>
 

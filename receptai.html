@@ -38,11 +38,10 @@
         <div class="title">
             <h2>Receptai</h2>
             <img src="./img/titlefoto.png" alt="foto">
-
         </div>
         <div class="dataTableContainer" id="dataTable">
-            <h2>Turimi receptai:</h2>
-            <div>
+            <div class="dataTableHeader">
+                <h2>Turimi receptai:</h2>
                 <button class="btnLoad" id="loadData">Atnaujinti sąrašą</button>
             </div>
             <table class="table-hover">
@@ -50,7 +49,6 @@
                     <tr>
                         <th>Pavadinimas</th>
                         <th>Gaminimo trukmė, min.</th>
-                        <!-- <th>Aprasymas</th> -->
                     </tr>
                 </thead>
                 <tbody id="dataTableBody">
@@ -79,7 +77,10 @@
                 <label for="" class="form-label">Aprašymas:</label>
                 <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
             </div>
-            <button class="btnReturn" id="return">Grįžti į sąrašą</button>
+            <div class="mb-3">
+                <button class="btnReturn" id="return">Grįžti į sąrašą</button>
+            </div>
+
         </div>
     </section>
     <footer>
