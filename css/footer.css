@@ -1,4 +1,27 @@
 footer {
     background-color: #AFE597;
     height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.social-list {
+    display: flex;
+    gap: 20px;
+}
+
+.social-list>.icon {
+    font-size: 35px;
+    color:#1e4e72c5;
+    text-decoration: none;
+}
+
+.social-list>.icon:hover {
+    color: red;
+}
+
+.copyright {
+    font-style: italic;
 }

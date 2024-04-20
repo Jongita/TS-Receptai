@@ -16,7 +16,7 @@
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -39,7 +39,28 @@
             <img src="./img/titlefoto.png" alt="foto">
 
         </div>
+        <div class="dataTableContainer" id="dataTable">
+            <h2>Turimi receptai:</h2>
+            <div>
+                <button class="btnLoad" id="loadData">Atnaujinti sąrašą</button>
+            </div>
+            <table class="table-hover">
+                <thead>
+                    <tr>
+                        <th>Pavadinimas</th>
+                        <th>Gaminimo trukmė, min.</th>
+                        <!-- <th>Aprasymas</th> -->
+                    </tr>
+                </thead>
+                <tbody id="dataTableBody">
+                    <tr>
+                        <th>Lazanija</th>
+                        <th>45</th>
+                    </tr>
+                </tbody>
+            </table>
 
+        </div>
     </section>
     <footer>
         <div class="social-list">

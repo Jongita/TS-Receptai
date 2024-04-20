@@ -43,3 +43,35 @@ body {
     font-size: 70px;
     z-index: 1;
 }
+
+.dataTableContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dataTableContainer h2 {
+    margin: 20px 0;
+}
+
+.table-hover {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+th {
+    border-bottom: 1px solid #ddd;
+    width: 300px;
+}
+
+.btnLoad {
+    padding: 15px 50px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    background-color: #1e4e72c5;
+    cursor: pointer;
+}

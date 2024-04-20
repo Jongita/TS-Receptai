@@ -19,10 +19,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/section.css">
     <link rel="stylesheet" href="./css/footer.css">
+
     <script type="module" src="./dist/app.js"></script>
 </head>
 
@@ -90,14 +92,14 @@
                     <tbody id="dataTableBody">
                         <tr>
                             <th>Lazanija</th>
-                            <th>45 min.</th>
+                            <th>45</th>
                         </tr>
                     </tbody>
                 </table>
 
             </div>
 
-            <div class="editDataTableContainer" id="editForm" style="display: none; background-color: yellow;">
+            <div class="editDataTableContainer" id="editForm" style="display: none;">
                 <div class="mb-3">
                     <label for="" class="form-label">Pavadinimas:</label>
                     <input type="text" name="" id="recipeNameEdit" class="form-control">
@@ -110,7 +112,7 @@
                     <label for="" class="form-label">Aprašymas:</label>
                     <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
                 </div>
-                <button class="btn btn-success" id="updateRegistration">Atnaujinti įrašą</button>
+                <button class="btnUpdate" id="updateRegistration">Atnaujinti įrašą</button>
             </div>
             <!-- <div>
                 <button class="btn" id="loadData">Atnaujinti sąrašą</button>
