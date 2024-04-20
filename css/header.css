@@ -1,7 +1,7 @@
 .mainHeader {
   
     height: 75px;
-    background-color: #AFE597;
+    background-color:#0f273ac5;
     display: flex;
     justify-content: space-between;
    
@@ -19,9 +19,14 @@
     display: flex;
     justify-content: center;
     gap: 50px;
+}
+
+
+
+li a {
+    color: white;
+    text-decoration: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    text-decoration: none;
-    color: #1e4e72c5;
     
 }

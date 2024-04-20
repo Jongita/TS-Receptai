@@ -1,5 +1,5 @@
 footer {
-    background-color: #AFE597;
+    background-color: #0f273ac5;
     height: 75px;
     display: flex;
     justify-content: space-between;
@@ -10,11 +10,12 @@ footer {
 .social-list {
     display: flex;
     gap: 20px;
+    margin-left: 20px;
 }
 
 .social-list>.icon {
     font-size: 35px;
-    color:#1e4e72c5;
+    color:white;
     text-decoration: none;
 }
 
@@ -24,4 +25,6 @@ footer {
 
 .copyright {
     font-style: italic;
+    color: white;
+    margin-right: 20px;
 }
