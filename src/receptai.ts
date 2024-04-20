@@ -6,6 +6,7 @@ const ingredientsDOM=<HTMLTextAreaElement>document.getElementById("ingredients")
 const descriptionDOM=<HTMLTextAreaElement>document.getElementById("description");
 
 const loadDataButton=<HTMLButtonElement>document.getElementById("loadData");
+const returnButton=<HTMLButtonElement>document.getElementById("return");
 const dataTableBody=<HTMLElement>document.getElementById("dataTableBody");
 
 const dataTable=<HTMLElement>document.getElementById("dataTable");
@@ -45,6 +46,11 @@ const showData=()=>{
             (<HTMLTextAreaElement>document.getElementById("ingredientsEdit")).value=reg.ingredients;
             (<HTMLTextAreaElement>document.getElementById("descriptionEdit")).value=reg.description;
           }
+        returnButton.onclick=()=>{
+            dataTable.style.display="block";
+            editForm.style.display="none";
+        }
+        
     })
 
 }

@@ -3,6 +3,7 @@ const cookTimeDOM = document.getElementById("cookTime");
 const ingredientsDOM = document.getElementById("ingredients");
 const descriptionDOM = document.getElementById("description");
 const loadDataButton = document.getElementById("loadData");
+const returnButton = document.getElementById("return");
 const dataTableBody = document.getElementById("dataTableBody");
 const dataTable = document.getElementById("dataTable");
 const editForm = document.getElementById("editForm");
@@ -29,6 +30,10 @@ const showData = () => {
             document.getElementById("cookTimeEdit").value = reg.cookTime.toString();
             document.getElementById("ingredientsEdit").value = reg.ingredients;
             document.getElementById("descriptionEdit").value = reg.description;
+        };
+        returnButton.onclick = () => {
+            dataTable.style.display = "block";
+            editForm.style.display = "none";
         };
     });
 };
