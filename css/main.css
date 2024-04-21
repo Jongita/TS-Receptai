@@ -1,11 +1,6 @@
 .mainContainer {
-    /* width: 1500px; */
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* background-color: #1e4e72c5; */
-    /* min-height: calc(100vh - 500px);
-    min-width: calc(100vw - 1500px); */
 }
 
 .container {
@@ -53,25 +48,10 @@
     border: 2px solid white;
     color: white;
     font-size: 20px;
-    background-color: #1e4e72c5;
     cursor: pointer;
 }
 
-
-/* 
-.editDataTableContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: yellow;
-    margin-top: 50px;
-    gap: 40px;
-} */
-
-
-
-.btnUpdate {
+.btnAdd,.btnUpdate {
     padding: 15px 25px;
     border-radius: 20px;
     border: 2px solid white;
@@ -106,7 +86,6 @@
 /* Login section */
 
 #loginSection {
-    background-color: #1e4e72c5;
     min-height: calc(100vh - 150px);
 }
 

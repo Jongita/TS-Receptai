@@ -34,55 +34,57 @@
             </ul>
         </nav>
     </header>
-    <section id="dataSection">
-        <div class="title">
-            <h2>Receptai</h2>
-            <img src="./img/titlefoto.png" alt="foto">
-        </div>
-        <div class="dataTableContainer" id="dataTable">
-            <div class="dataTableHeader">
-                <h2>Turimi receptai:</h2>
-                <button class="btnLoad" id="loadData">Atnaujinti sąrašą</button>
+    <main>
+        <section id="dataSection">
+            <div class="title">
+                <h2>Receptai</h2>
+                <img src="./img/titlefoto.png" alt="foto">
             </div>
-            <table class="table-hover">
-                <thead>
-                    <tr>
-                        <th>Pavadinimas</th>
-                        <th>Gaminimo trukmė, min.</th>
-                    </tr>
-                </thead>
-                <tbody id="dataTableBody">
-                    <tr>
-                        <th>Lazanija</th>
-                        <th>45</th>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="dataTableContainer" id="dataTable">
+                <div class="dataTableHeader">
+                    <h2>Turimi receptai:</h2>
+                    <button class="btnLoad" id="loadData">Atnaujinti sąrašą</button>
+                </div>
+                <table class="table-hover">
+                    <thead>
+                        <tr>
+                            <th>Pavadinimas</th>
+                            <th>Gaminimo trukmė, min.</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody">
+                        <tr>
+                            <th>Lazanija</th>
+                            <th>45</th>
+                        </tr>
+                    </tbody>
+                </table>
 
-        </div>
-        <div class="editDataTableContainer" id="editForm" style="display: none;">
-            <div class="mb-3">
-                <label for="" class="form-label">Pavadinimas:</label>
-                <input type="text" name="" id="recipeNameEdit" class="form-control">
             </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Gaminimo trukmė, min.:</label>
-                <input type="number" name="" id="cookTimeEdit" class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Ingredientai:</label>
-                <textarea type="text" id="ingredientsEdit" placeholder="Ingredientai" class="form-control"></textarea>></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Aprašymas:</label>
-                <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
-            </div>
-            <div class="mb-3">
-                <button class="btnReturn" id="return">Grįžti į sąrašą</button>
-            </div>
+            <div class="editDataTableContainer" id="editForm" style="display: none;">
+                <div class="mb-3">
+                    <label for="" class="form-label">Pavadinimas:</label>
+                    <input type="text" name="" id="recipeNameEdit" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Gaminimo trukmė, min.:</label>
+                    <input type="number" name="" id="cookTimeEdit" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Ingredientai:</label>
+                    <textarea type="text" id="ingredientsEdit" placeholder="Ingredientai" class="form-control"></textarea>></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Aprašymas:</label>
+                    <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
+                </div>
+                <div class="mb-3">
+                    <button class="btnReturn" id="return">Grįžti į sąrašą</button>
+                </div>
 
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="social-list">
             <a class="icon fa fa-twitter" href="https://www.example.com" target="_blank"></a>

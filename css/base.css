@@ -11,12 +11,16 @@ body {
     width: 100vw;
 }
 
+main {
+    width: 1200px;
+    margin: 0 calc(50% - 600px);
+    background-color: #1e4e72c5;
+}
+
 #dataSection {
     display: flex;
-    
     align-items: center;
     flex-direction: column;
-    background-color:#1e4e72c5;
     min-height: calc(100vh - 150px);
 }
 
@@ -26,14 +30,13 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 0;
-    
 }
 
 .title img {
     position: relative;
     width: 1200px;
     height: 350px;
-    min-width: calc(100vw - 1200px);
+    margin: 0 calc(50% - 600px);
 }
 
 .title h2 {

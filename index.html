@@ -40,92 +40,92 @@
             </ul>
         </nav>
     </header>
-
-    <section id="loginSection">
-        <div class="title">
-            <h2>Receptai</h2>
-            <img src="./img/titlefoto.png" alt="foto">
-        </div>
-        <div class="containerLogin">
-            <div class="mainLogin">
-                <h2>Prisijunkite arba registruokitės</h2>
-                <input type="text" class="form-control" placeholder="El. pašto adresas" id="loginEmail">
-                <input type="password" class="form-control" placeholder="Slaptažodis" id="loginPassword">
-                <div class="alert" id="loginError"></div>
-                <div class="loginButtons">
-                    <button class="btnLogin" id="login">Prisijungti</button>
-                    <button class="btnRegister" id="register">Registruotis</button>
-                </div>
-                <h4>*Norint peržiūrėti receptus, eikite į RECEPTAI skiltį</h4>
+    <main>
+        <section id="loginSection">
+            <div class="title">
+                <h2>Receptai</h2>
+                <img src="./img/titlefoto.png" alt="foto">
             </div>
-        </div>
-    </section>
-
-    <section id="dataSection">
-        <div class="title">
-            <h2>Receptai</h2>
-            <img src="./img/titlefoto.png" alt="foto">
-        </div>
-        <div class="mainContainer">
-            <div class="container">
-                <h2>Įvesti receptą:</h2>
-                <div class="mainRecipeForm" id="recipeForm">
-                    <input type="text" id="recipeName" placeholder="Pavadinimas">
-                    <input type="number" id="cookTime" placeholder="Gaminimo trukmė, min.">
-                    <textarea id="ingredients" placeholder="Ingredientai"></textarea>
-                    <textarea id="description" placeholder="Aprašymas"></textarea>
-                    <button class="btn" id="addRegistration">Pridėti receptą</button>
+            <div class="containerLogin">
+                <div class="mainLogin">
+                    <h2>Prisijunkite arba registruokitės</h2>
+                    <input type="text" class="form-control" placeholder="El. pašto adresas" id="loginEmail">
+                    <input type="password" class="form-control" placeholder="Slaptažodis" id="loginPassword">
+                    <div class="alert" id="loginError"></div>
+                    <div class="loginButtons">
+                        <button class="btnLogin" id="login">Prisijungti</button>
+                        <button class="btnRegister" id="register">Registruotis</button>
+                    </div>
+                    <h4>*Norint peržiūrėti receptus, eikite į RECEPTAI skiltį</h4>
                 </div>
-
             </div>
-            <div class="dataTableContainer" id="dataTable">
-                <div class="dataTableHeader">
-                    <h2>Turimi receptai:</h2>
-                    <button class="btnLoad" id="loadData">Atnaujinti sąrašą</button>
-                </div>
-                <table class="table-hover">
-                    <thead>
-                        <tr>
-                            <th>Pavadinimas</th>
-                            <th>Gaminimo trukmė, min.</th>
-                        </tr>
-                    </thead>
-                    <tbody id="dataTableBody">
-                        <tr>
-                            <th>Lazanija</th>
-                            <th>45</th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        </section>
 
-            <div class="editDataTableContainer" id="editForm" style="display: none;">
-                <div class="mb-3">
-                    <label for="" class="form-label">Pavadinimas:</label>
-                    <input type="text" name="" id="recipeNameEdit" class="form-control">
+        <section id="dataSection">
+            <div class="title">
+                <h2>Receptai</h2>
+                <img src="./img/titlefoto.png" alt="foto">
+            </div>
+            <div class="mainContainer">
+                <div class="container">
+                    <h2>Įvesti receptą:</h2>
+                    <div class="mainRecipeForm" id="recipeForm">
+                        <input type="text" id="recipeName" placeholder="Pavadinimas">
+                        <input type="number" id="cookTime" placeholder="Gaminimo trukmė, min.">
+                        <textarea id="ingredients" placeholder="Ingredientai"></textarea>
+                        <textarea id="description" placeholder="Aprašymas"></textarea>
+                        <button class="btnAdd" id="addRegistration">Pridėti receptą</button>
+                    </div>
+
                 </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Gaminimo trukmė, min.:</label>
-                    <input type="number" name="" id="cookTimeEdit" class="form-control">
+                <div class="dataTableContainer" id="dataTable">
+                    <div class="dataTableHeader">
+                        <h2>Turimi receptai:</h2>
+                        <button class="btnLoad" id="loadData">Atnaujinti sąrašą</button>
+                    </div>
+                    <table class="table-hover">
+                        <thead>
+                            <tr>
+                                <th>Pavadinimas</th>
+                                <th>Gaminimo trukmė, min.</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataTableBody">
+                            <tr>
+                                <th>Lazanija</th>
+                                <th>45</th>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div>
+
+                <div class="editDataTableContainer" id="editForm" style="display: none;">
                     <div class="mb-3">
-                        <label for="" class="form-label">Ingredientai:</label>
-                        <textarea type="text" id="ingredientsEdit" placeholder="Ingredientai" class="form-control"></textarea>></textarea>
+                        <label for="" class="form-label">Pavadinimas:</label>
+                        <input type="text" name="" id="recipeNameEdit" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Aprašymas:</label>
-                        <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
+                        <label for="" class="form-label">Gaminimo trukmė, min.:</label>
+                        <input type="number" name="" id="cookTimeEdit" class="form-control">
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Ingredientai:</label>
+                            <textarea type="text" id="ingredientsEdit" placeholder="Ingredientai" class="form-control"></textarea>></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Aprašymas:</label>
+                            <textarea type="text" id="descriptionEdit" placeholder="Aprašymas" class="form-control"></textarea>></textarea>
+                        </div>
+                    </div>
+                    <div class="buttonsEditTable">
+                        <button class="btnUpdate" id="updateRegistration">Atnaujinti įrašą</button>
+                        <button class="btnDelete" id="deleteRegistration">Ištrinti įrašą</button>
                     </div>
                 </div>
-                <div class="buttonsEditTable">
-                    <button class="btnUpdate" id="updateRegistration">Atnaujinti įrašą</button>
-                    <button class="btnDelete" id="deleteRegistration">Ištrinti įrašą</button>
-                </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <footer>
         <div class="social-list">
             <a class="icon fa fa-twitter" href="https://www.example.com" target="_blank"></a>
