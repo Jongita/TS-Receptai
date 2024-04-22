@@ -4,8 +4,8 @@
     background-color:#0f273ac5;
     display: flex;
     justify-content: space-between;
-    width: 1200px;
-    margin: 0 calc(50% - 600px);
+    width: 1400px;
+    margin: 0 calc(50% - 700px);
 }
 
 .mainHeaderList {

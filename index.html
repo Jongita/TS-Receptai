@@ -40,6 +40,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="loginSection">
             <div class="title">
@@ -67,6 +68,8 @@
                 <img src="./img/titlefoto.png" alt="foto">
             </div>
             <div class="mainContainer">
+
+
                 <div class="container">
                     <h2>Įvesti receptą:</h2>
                     <div class="mainRecipeForm" id="recipeForm">
@@ -99,6 +102,35 @@
                     </table>
                 </div>
 
+                <div class="settingsContainer" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="deleteAccount">Išsiregistruoti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="logOut">Atsijungti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="changePassword">Pakeisti slaptažodį</a>
+                        </li>
+                        <input type="password" class="form-control" placeholder="Naujas slaptažodis" id="newLoginPassword" style="display: none;">
+
+                        <!-- <a class="btnChange" href="#" id="change" style="display: none;">Keisti</a> -->
+                        <button class="btnChange" id="change" style="display: none" ;>Keisti slaptažodį</button>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="changeEmail">Pakeisti el.pašto adresą</a>
+                        </li>
+                        <input type="text" class="form-control" placeholder="Naujas el.pašto adresas" id="newLoginEmail" style="display: none;">
+
+                        <button class="btnChange" id="changeE" style="display: none" ;>Keisti el.paštą</button>
+
+
+                    </ul>
+
+                </div>
+
+
                 <div class="editDataTableContainer" id="editForm" style="display: none;">
                     <div class="mb-3">
                         <label for="" class="form-label">Pavadinimas:</label>
@@ -126,6 +158,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div class="social-list">
             <a class="icon fa fa-twitter" href="https://www.example.com" target="_blank"></a>

@@ -1,4 +1,4 @@
-import { loginExec, registerExec } from "./auth.js";
+import { loadUser, loginExec, registerExec, showLogin, changeExec, changeEmailExec } from "./auth.js";
 import { fetchRegistrations } from "./fetchData.js";
 import { loadData } from "./loadData.js";
 const recipeNameDOM = document.getElementById("recipeName");
@@ -36,9 +36,10 @@ export const userInfo = {
     idToken: "",
     loggedin: false,
 };
-document.getElementById("loginSection").style.display = "block";
-document.getElementById("dataSection").style.display = "none";
-document.getElementById("loginError").style.display = "none";
+showLogin();
+loadUser();
 loadDataButton.onclick = loadData;
 document.getElementById("login").onclick = loginExec;
 document.getElementById("register").onclick = registerExec;
+document.getElementById("changePassword").onclick = changeExec;
+document.getElementById("changeEmail").onclick = changeEmailExec;
