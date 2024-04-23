@@ -1,6 +1,7 @@
 .mainContainer {
     display: flex;
     justify-content: center;
+   
 }
 
 .container {
@@ -170,9 +171,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-   
     margin-top: 20px;
-
 }
 
 .nav-link {
@@ -182,7 +181,7 @@
 .btnChange {
     background-color: grey;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: 1px solid grey;
+    border: 2px solid black;
     cursor: pointer;
    
 }
