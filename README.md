@@ -20,6 +20,7 @@ Design: [Receptai]
 ## 🎯 Project features/goals
 
 -   Github pages
+-   No responsive design
 -   favicon
 -   fontAwesom icons
 -   css `display:flex`
